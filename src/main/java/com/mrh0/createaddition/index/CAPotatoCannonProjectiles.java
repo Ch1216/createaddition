@@ -23,6 +23,7 @@ public class CAPotatoCannonProjectiles {
 			.renderTumbling()
 			.sticky()
 			.soundPitch(1.0f)
+			.onEntityHit(potion(Effects.SLOWNESS, 3,320))
 			.registerAndAssign(CABlocks.HONEY_CAKE.get());
 	
 	public static void register() {
