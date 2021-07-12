@@ -33,7 +33,15 @@ public class CAPotatoCannonProjectiles {
 			.renderTumbling()
 			.soundPitch(1.0f)
 			.onEntityHit(ray -> ray.getEntity().setFire(20))
-			.registerAndAssign(Items.BLAZE_ROD.get());
+			.registerAndAssign(Items.BLAZE_ROD.get()),
+		STICK = create("stick")
+			.damage(1)
+			.reloadTicks(15)
+			.knockback(1.05f)
+			.velocity(1.1f)
+			.renderTumbling()
+			.soundPitch(1.0f)
+			.registerAndAssign(Items.STICK.get());
 	
 	public static void register() {
 		
