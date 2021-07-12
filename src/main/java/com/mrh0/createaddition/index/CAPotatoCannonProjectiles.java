@@ -24,7 +24,16 @@ public class CAPotatoCannonProjectiles {
 			.sticky()
 			.soundPitch(1.0f)
 			.onEntityHit(potion(Effects.SLOWNESS, 3,320))
-			.registerAndAssign(CABlocks.HONEY_CAKE.get());
+			.registerAndAssign(CABlocks.HONEY_CAKE.get()),
+		BLAZE_ROD = create("blaze_rod")
+			.damage(1)
+			.reloadTicks(15)
+			.knockback(1.05f)
+			.velocity(1.1f)
+			.renderTumbling()
+			.soundPitch(1.0f)
+			.onEntityHit(ray -> ray.getEntity().setFire(20))
+			.registerAndAssign(Items.BLAZE_ROD.get());
 	
 	public static void register() {
 		
